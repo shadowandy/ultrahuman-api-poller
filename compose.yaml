@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ultrahuman-api-poller:
+    build: .
+    environment:
+      - API_TOKEN=your-authorization-token-from-vision.ultrahuman.com
+      - INFLUX_URL=http://influxdb:8086
+      - INFLUX_TOKEN=your-influx-token
+      - INFLUX_ORG=your-org
+      - INFLUX_BUCKET=your-bucket
+      - DEBUG_MODE=true
+      - POLLING_INTERVAL=3600
+    restart: unless-stopped
