@@ -1,7 +1,7 @@
-version: '3'
 services:
   ultrahuman-api-poller:
     build: .
+    container_name: ultrahuman-api-poller
     environment:
       - API_TOKEN=your-authorization-token-from-vision.ultrahuman.com
       - INFLUX_URL=http://influxdb:8086
